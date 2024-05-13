@@ -1,0 +1,147 @@
+:root {
+    --background-color: #1c1c1c;
+    --primary-color: #8b0000;
+    --secondary-color: #7df9ff;
+    --accent-color: #39ff14;
+    --tertiary-color:#FBDA62;
+    --text-color: #f7f1db;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.game-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.game-container {
+    background-color: var(--secondary-color);
+    /* Use secondary color for the background */
+    color: var(--text-color);
+    /* Use text color for text */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow effect */
+}
+.play-now-button {
+    background-color: var(--accent-color); /* Use accent color for the button background */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Adjust padding for button size */
+    border: none;
+    border-radius: 50px; /* Make the button pill-shaped by setting border-radius to half of its height */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition effect */
+  }
+  
+  /* Hover effect */
+  .play-now-button:hover {
+    background-color: darken(var(--accent-color), 10%); /* Darken the background color on hover */
+  }
+  .game-info {
+    background-color: var(--tertiary-color); /* Use secondary color for the container background */
+    color: var(--text-color); /* Text color */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+  }
+  
+  /* Apply styles to the game title */
+  .game-info h2 {
+    margin: 0; /* Remove default margin */
+  }
+
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
+    }
+
+a {
+    color: var(--secondary-color);
+}
+
+.button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+.header-bar {
+    height: 50px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-height: 100%;
+    max-width: 115px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.welcome-block {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.welcome-block h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.welcome-block p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.play-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #0056b3;
+}
