@@ -29,14 +29,23 @@
     </div>
 
     <main>
-
-        <div class="welcome-block">
-            <h2>Welcome to Pixel Playground!</h2>
-            <p>Explore our collection of exciting games!</p>
-            <a href="games.html" class="play-button">Play Now</a>
+        <div class="login-container">
+            <form action="login.php" method="post">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
         </div>
-
     </main>
+
 
     <footer>
         <p>&copy; 2024 Pixel Playground. All rights reserved.</p>
