@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -28,8 +31,19 @@
         </nav>
     </div>
 
+    <main>
+
+        <div class="welcome-block">
+            <h2>Welcome to Pixel Playground!</h2>
+            <p>Explore our collection of exciting games!</p>
+            <a href="games.html" class="play-button">Play Now</a>
+        </div>
+
+    </main>
+
     <footer>
         <p>&copy; 2024 Pixel Playground. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
