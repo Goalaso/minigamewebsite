@@ -17,12 +17,12 @@ session_start();
 <body>
     <div class="header-bar">
         <div class="logo">
-            <a href="pixelPlayground.html"><img src="assets/images/Pixel4.png" alt="Gaming Website Logo"></a>
+            <a href="pixelPlayground.php"><img src="assets/images/Pixel4.png" alt="Gaming Website Logo"></a>
         </div class>
 
         <nav>
             <ul>
-                <li><a href="pixelPlayground.php"><img src="assets/images/home.png" alt="home button">Home</a></li> 
+                <li><a href="pixelPlayground.php">Home</a></li> 
                 <li><a href="games.html">Games</a></li>
                 <li><a href="login.php">Login/Sign up</a></li>
                 <li><a href="score.html">Score</a></li>
