@@ -22,7 +22,7 @@ session_start();
 
         <nav>
             <ul>
-                <li><a href="pixelPlayground.php">Home</a></li>
+                <li><a href="pixelPlayground.php"><img src="assets/images/home.png" alt="home button">Home</a></li> 
                 <li><a href="games.html">Games</a></li>
                 <li><a href="login.php">Login/Sign up</a></li>
                 <li><a href="score.html">Score</a></li>
