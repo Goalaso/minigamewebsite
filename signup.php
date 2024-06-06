@@ -22,10 +22,10 @@ session_start();
         <nav>
             <ul>
                 <li><a href="pixelPlayground.php">Home</a></li>
-                <li><a href="games.html">Games</a></li>
+                <li><a href="games.php">Games</a></li>
                 <li><a href="login.php">Login/Sign up</a></li>
-                <li><a href="score.html">Score</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="score.php">Score</a></li>
+                <li><a href="about.php">About</a></li>
             </ul>
         </nav>
     </div>
@@ -66,6 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $query->bindValue(":username", $_POST["username"], SQLITE3_TEXT);
             $isUsernameTaken = $query->execute();
             // echo var_dump($isUsernameTaken);
+
+            // Idk how this works. isUsernameTaken always has value 0 when var_dumped but if statement still executes?
             if ($isUsernameTaken) {
 
                 $insert_query = $database->prepare("INSERT INTO account (username, password) VALUES

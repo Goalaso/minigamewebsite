@@ -22,10 +22,10 @@ session_start();
         <nav>
             <ul>
                 <li><a href="pixelPlayground.php">Home</a></li>
-                <li><a href="games.html">Games</a></li>
+                <li><a href="games.php">Games</a></li>
                 <li><a href="login.php">Login/Sign up</a></li>
-                <li><a href="score.html">Score</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="score.php">Score</a></li>
+                <li><a href="about.php">About</a></li>
             </ul>
         </nav>
     </div>
@@ -81,8 +81,8 @@ session_start();
                     // echo $row['username'];
                     if ($username === $row['username'] && $password === $row['password']) {
                         $match = true;
-                        // $_SESSION['fullname'] = $row['fullname'];
                         $_SESSION['id'] = $row['id'];
+                        $_SESSION['username'] = $row['username'];
                     }
                 }
                 if (!$match) {
