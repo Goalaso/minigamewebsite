@@ -62,8 +62,9 @@ session_start();
             <div class="game-container">
                 <div class="game-screen">
                 </div>
+                <h2>Dodge the Creeps</h2>
                 <p>description of game</p>
-                <button class="play-now-button">play now</button>
+                <a href = "dodge.php"> <button class="play-now-button">play now</button> </a>
             </div>
 
             <div class="game-container">
