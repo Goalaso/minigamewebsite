@@ -18,15 +18,22 @@ body {
 }
 
 .game-container {
-    background-color: var(--secondary-color);
+    background-color: #C7C7C7;
     /* Use secondary color for the background */
-    color: var(--text-color);
-    /* Use text color for text */
+    color: #C7C7C7;
+    /* Use text color for text */  
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     /* Add a subtle shadow effect */
+}
+.game-screen {
+    background-color: #404040;
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
 }
 .play-now-button {
     background-color: var(--accent-color); /* Use accent color for the button background */
@@ -41,19 +48,6 @@ body {
   /* Hover effect */
   .play-now-button:hover {
     background-color: darken(var(--accent-color), 10%); /* Darken the background color on hover */
-  }
-  .game-info {
-    background-color: var(--tertiary-color); /* Use secondary color for the container background */
-    color: var(--text-color); /* Text color */
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
-  }
-  
-  /* Apply styles to the game title */
-  .game-info h2 {
-    margin: 0; /* Remove default margin */
   }
 
 h1,

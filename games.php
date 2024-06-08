@@ -44,35 +44,35 @@ session_start();
         <!-- Game thumbnails -->
         <div class="game-grid">
             <div class="game-container">
-                <div class="game-boarder">
+                <div class="game-screen">
                 </div>
                 <p>description of game</p>
                 <button class="play-now-button">play now</button>
             </div>
 
             <div class="game-container">
-                <div class="game-boarder">
+                <div class="game-screen">
                 </div>
                 <p>description of game</p>
                 <button class="play-now-button">play now</button>
             </div>
 
             <div class="game-container">
-                <div class="game-boarder">
+                <div class="game-screen">
                 </div>
                 <p>description of game</p>
                 <button class="play-now-button">play now</button>
             </div>
 
             <div class="game-container">
-                <div class="game-boarder">
+                <div class="game-screen">
                 </div>
                 <p>description of game</p>
                 <button class="play-now-button">play now</button>
             </div>
 
             <div class="game-container">
-                <div class="game-boarder">
+                <div class="game-screen">
                 </div>
                 <p>description of game</p>
                 <button class="play-now-button">play now</button>
