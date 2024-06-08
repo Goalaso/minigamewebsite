@@ -41,65 +41,44 @@ session_start();
     </div>
     
     <main>
-        <!-- Game thumbnails, news articles, etc. -->
-        
+        <!-- Game thumbnails -->
         <div class="game-grid">
             <div class="game-container">
-                <div class="game-info">
-                <h2>Game 1</h2>
+                <div class="game-boarder">
                 </div>
                 <p>description of game</p>
                 <button class="play-now-button">play now</button>
             </div>
 
             <div class="game-container">
-                <h2>Game 2</h2>
+                <div class="game-boarder">
+                </div>
                 <p>description of game</p>
                 <button class="play-now-button">play now</button>
             </div>
 
             <div class="game-container">
-                <h2>Game 3</h2>
+                <div class="game-boarder">
+                </div>
                 <p>description of game</p>
                 <button class="play-now-button">play now</button>
             </div>
 
             <div class="game-container">
-                <h2>Game 4</h2>
+                <div class="game-boarder">
+                </div>
                 <p>description of game</p>
                 <button class="play-now-button">play now</button>
             </div>
 
             <div class="game-container">
-                <h2>Game 5</h2>
-                <p>description of game</p>
-                <button class="play-now-button">play now</button>
-            </div>
-
-            <div class="game-container">
-                <h2>Game 6</h2>
-                <p>description of game</p>
-                <button class="play-now-button">play now</button>
-            </div>
-
-            <div class="game-container">
-                <h2>Game 7</h2>
-                <p>description of game</p>
-                <button class="play-now-button">play now</button>
-            </div>
-
-            <div class="game-container">
-                <h2>Game 8</h2>
-                <p>description of game</p>
-                <button class="play-now-button">play now</button>
-            </div>
-
-            <div class="game-container">
-                <h2>Game 9</h2>
+                <div class="game-boarder">
+                </div>
                 <p>description of game</p>
                 <button class="play-now-button">play now</button>
             </div>
         </div>
+        
     </main>
     <footer>
         <p>&copy; 2024 Pixel Playground. All rights reserved.</p>
