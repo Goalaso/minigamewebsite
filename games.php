@@ -44,24 +44,17 @@ session_start();
         <!-- Game thumbnails -->
         <div class="game-grid">
             <div class="game-container">
-<<<<<<< Updated upstream
                 <div class="game-screen">
-=======
-                <div class="game-info">
-                <h2>Snake</h2>
->>>>>>> Stashed changes
                 </div>
+                <h2>Snake</h2>
                 <p>description of game</p>
                 <a href = "snake.php"> <button class="play-now-button">play now</button> </a>
             </div>
 
             <div class="game-container">
-<<<<<<< Updated upstream
                 <div class="game-screen">
                 </div>
-=======
                 <h2>Dino Run</h2>
->>>>>>> Stashed changes
                 <p>description of game</p>
                 <a href = "dino.php"> <button class="play-now-button">play now</button> </a>
             </div>
