@@ -17,13 +17,21 @@ session_start();
     <div class="header-bar">
         <div class="logo">
             <a href="pixelPlayground.php"><img src="assets/images/Pixel4.png" alt="Gaming Website Logo"></a>
-        </div class>
+        </div>
+
+        <div class="welcome">
+            <?php if (isset($_SESSION['username'])) {
+            echo "Welcome " . $_SESSION['username'] . " | <a href='./logout.php'>Log out</a>";
+        } ?>
+        </div>
 
         <nav>
             <ul>
                 <li><a href="pixelPlayground.php">Home</a></li>
                 <li><a href="games.php">Games</a></li>
-                <li><a href="login.php">Login/Sign up</a></li>
+                <?php if (!isset($_SESSION['username'])) {
+            echo "<li><a href='login.php'>Login/Sign up</a></li>";
+        } ?>
                 <li><a href="score.php">Score</a></li>
                 <li><a href="about.php">About</a></li>
             </ul>
@@ -31,6 +39,11 @@ session_start();
     </div>
 
     <main>
+        <?php
+            if (isset($_SESSION['username'])) {
+                echo "Already logged in";
+            } else {
+                echo <<<HEREDOC
         <div class="login-container">
             <form action="login.php" method="post">
                 <h2>Login</h2>
@@ -46,6 +59,9 @@ session_start();
             </form>
             <p>Don't have an account? <a href="signup.php">Sign up</a></p>
         </div>
+        HEREDOC;
+            }
+        ?>
     </main>
 
     <footer>
@@ -83,6 +99,7 @@ session_start();
                         $match = true;
                         $_SESSION['id'] = $row['id'];
                         $_SESSION['username'] = $row['username'];
+                        header("Location: ./pixelPlayground.php");
                     }
                 }
                 if (!$match) {
