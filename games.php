@@ -18,7 +18,7 @@ session_start();
     <!-- Your content goes here -->
     <div class="header-bar">
         <div class="logo">
-            <a href="pixelPlayground.html"><img src="assets/images/Pixel4.png" alt="Gaming Website Logo"></a>
+            <a href="pixelPlayground.php"><img src="assets/images/Pixel4.png" alt="Gaming Website Logo"></a>
         </div class>
 
         <nav>

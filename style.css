@@ -173,3 +173,11 @@ nav ul li {
     margin-bottom: 20px;
     text-align: left;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+}
