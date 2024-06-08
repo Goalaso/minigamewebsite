@@ -179,3 +179,9 @@ footer {
 .welcome {
     margin-left: 10px;
 }
+
+.game-div {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}

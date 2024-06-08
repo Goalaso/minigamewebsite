@@ -44,25 +44,26 @@ session_start();
 </body>
 <?php
 
-    $database = new SQLite3('account.db');
-    
+    $database = new SQLite3('./account.db');
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
-        
-        // $id = $_SESSION['id'];
-        // $username = $_SESSION['username'];
-        // $game = $_POST['game'];
-        // $score = $_POST['score'];
+        $id = $_SESSION['id'];
+        $username = $_SESSION['username'];
+
+        $json = file_get_contents('php://input');
+        $data = json_decode($json, true);
+
+        $game = $data['game'];
+        $score = $data['score'];
 
         try {
             $insert_query = $database->prepare("INSERT INTO score (id, username, game, score) VALUES (:id, :username, :game, :score);");
-
-            //var_dump($_POST);
-
-            $insert_query->bindValue(":id", $_SESSION["id"], SQLITE3_INTEGER);
-            $insert_query->bindValue(":username", $_SESSION["username"], SQLITE3_TEXT);
-            $insert_query->bindValue(":game", $_POST["game"], SQLITE3_TEXT);
-            $insert_query->bindValue(":score", $_POST["score"], SQLITE3_INTEGER);
             
+            $insert_query->bindValue(":id", $id, SQLITE3_INTEGER);
+            $insert_query->bindValue(":username", $username, SQLITE3_TEXT);
+            $insert_query->bindValue(":game", $game, SQLITE3_TEXT);
+            $insert_query->bindValue(":score", $score, SQLITE3_INTEGER);
+
             $scores = $insert_query->execute();
 
             //echo "Success!";
@@ -73,7 +74,7 @@ session_start();
             echo "Error: " . $e->getMessage();
         }
         
-        } else if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Create high score table
+    } else if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Create high score table
 
             ?>
             <table>
@@ -85,9 +86,7 @@ session_start();
             <?php
             $query = <<<HEREDOC
             SELECT * FROM score 
-            WHERE game = 'snake'
             ORDER BY score DESC
-            LIMIT 5;
             HEREDOC;
             $scores = $database->query($query);
             
@@ -99,9 +98,9 @@ session_start();
                 echo "<td>" . $row['score'] . "</td>";
                 echo "</tr>";
                 }
-                } else {
-                    echo "Only GET and POST accepted.";
-                }
+    } else {
+        echo "Only GET and POST accepted.";
+    }
                     
             ?>
         </table>
