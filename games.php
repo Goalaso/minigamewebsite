@@ -45,6 +45,7 @@ session_start();
         <div class="game-grid">
             <div class="game-container">
                 <div class="game-screen">
+                    
                 </div>
                 <h2>Snake</h2>
                 <p>description of game</p>
@@ -53,6 +54,7 @@ session_start();
 
             <div class="game-container">
                 <div class="game-screen">
+                    <a href="dino.php"><img class="thumbnail" src="assets/images/dinorun.png" alt="Dino Run">
                 </div>
                 <h2>Dino Run</h2>
                 <p>description of game</p>

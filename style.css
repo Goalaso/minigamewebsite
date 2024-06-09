@@ -2,7 +2,7 @@
     --background-color: #1c1c1c;
     --primary-color: #8b0000;
     --secondary-color: #7df9ff;
-    --accent-color: #39ff14;
+    --accent-color: #591b5c;
     --tertiary-color:#FBDA62;
     --text-color: #f7f1db;
 }
@@ -26,14 +26,23 @@ body {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 137.1px;
     /* Add a subtle shadow effect */
 }
 .game-screen {
     background-color: #404040;
-    padding: 40px;
-    margin-bottom: 20px;
+    width: 137.1px;
+    height: 80px;
+    /* padding: 40px; */
+    /* margin-bottom: 20px; */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Add a subtle shadow effect */
+}
+
+.thumbnail {
+    width: 137.1px;
+    height: 80px;
+    object-fit: contain;
 }
 .play-now-button {
     background-color: var(--accent-color); /* Use accent color for the button background */
