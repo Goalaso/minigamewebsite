@@ -23,8 +23,8 @@ session_start();
 
         <div class="welcome">
             <?php if (isset($_SESSION['username'])) {
-            echo "Welcome " . $_SESSION['username'] . " | <a href='./logout.php'>Log out</a>";
-        } ?>
+                echo "Welcome " . $_SESSION['username'] . " | <a href='./logout.php'>Log out</a>";
+            } ?>
         </div>
 
         <nav>
@@ -32,24 +32,23 @@ session_start();
                 <li><a href="pixelPlayground.php">Home</a></li>
                 <li><a href="games.php">Games</a></li>
                 <?php if (!isset($_SESSION['username'])) {
-            echo "<li><a href='login.php'>Login/Sign up</a></li>";
-        } ?>
+                    echo "<li><a href='login.php'>Login/Sign up</a></li>";
+                } ?>
                 <li><a href="score.php">Score</a></li>
                 <li><a href="about.php">About</a></li>
             </ul>
         </nav>
     </div>
-    
+
     <main>
         <!-- Game thumbnails -->
         <div class="game-grid">
             <div class="game-container">
                 <div class="game-screen">
-                    
+                    <a href="snake.php"><img class="thumbnail" src="assets/images/snake.png" alt="Snake">
                 </div>
                 <h2>Snake</h2>
-                <p>description of game</p>
-                <a href = "snake.php"> <button class="play-now-button">play now</button> </a>
+                <a href="snake.php"> <button class="play-now-button">play now</button> </a>
             </div>
 
             <div class="game-container">
@@ -57,37 +56,41 @@ session_start();
                     <a href="dino.php"><img class="thumbnail" src="assets/images/dinorun.png" alt="Dino Run">
                 </div>
                 <h2>Dino Run</h2>
-                <p>description of game</p>
-                <a href = "dino.php"> <button class="play-now-button">play now</button> </a>
+                <a href="dino.php"> <button class="play-now-button">play now</button> </a>
             </div>
 
             <div class="game-container">
                 <div class="game-screen">
+                    <a href="dodgeTheCreeps.php"><img class="thumbnail" src="assets/images/dodgeTheCreeps.png"
+                            alt="Dodge the Creeps">
                 </div>
                 <h2>Dodge the Creeps</h2>
-                <p>description of game</p>
-                <a href = "dodge.php"> <button class="play-now-button">play now</button> </a>
+                <a href="dodge.php"> <button class="play-now-button">play now</button> </a>
             </div>
 
             <div class="game-container">
                 <div class="game-screen">
+                    <a href="minesweeper.php"><img class="thumbnail" src="assets/images/minesweeper.png"
+                            alt="Minesweeper">
                 </div>
-                <p>description of game</p>
-                <button class="play-now-button">play now</button>
+                <h2>Minesweeper</h2>
+                <a href="minesweeper.php"> <button class="play-now-button">play now</button> </a>
             </div>
 
             <div class="game-container">
                 <div class="game-screen">
+                    <a href="bird.php"><img class="thumbnail" src="assets/images/wackyBird.png" alt="Wacky Bird">
                 </div>
-                <p>description of game</p>
-                <button class="play-now-button">play now</button>
+                <h2>Wacky Bird</h2>
+                <a href="bird.php"><button class="play-now-button">play now</button></a>
             </div>
         </div>
-        
+
     </main>
     <footer>
         <p>&copy; 2024 Pixel Playground. All rights reserved.</p>
     </footer>
-    
+
 </body>
+
 </html>

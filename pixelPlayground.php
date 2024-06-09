@@ -19,11 +19,11 @@ session_start();
         <div class="logo">
             <a href="pixelPlayground.php"><img src="assets/images/Pixel4.png" alt="Gaming Website Logo"></a>
         </div class>
-        
+
         <div class="welcome">
             <?php if (isset($_SESSION['username'])) {
-            echo "Welcome " . $_SESSION['username'] . " | <a href='./logout.php'>Log out</a>";
-        } ?>
+                echo "Welcome " . $_SESSION['username'] . " | <a href='./logout.php'>Log out</a>";
+            } ?>
         </div>
 
         <nav>
@@ -31,8 +31,8 @@ session_start();
                 <li><a href="pixelPlayground.php">Home</a></li>
                 <li><a href="games.php">Games</a></li>
                 <?php if (!isset($_SESSION['username'])) {
-            echo "<li><a href='login.php'>Login/Sign up</a></li>";
-        } ?>
+                    echo "<li><a href='login.php'>Login/Sign up</a></li>";
+                } ?>
                 <li><a href="score.php">Score</a></li>
                 <li><a href="about.php">About</a></li>
             </ul>
