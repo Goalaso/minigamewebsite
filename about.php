@@ -22,8 +22,8 @@ session_start();
 
         <div class="welcome">
             <?php if (isset($_SESSION['username'])) {
-            echo "Welcome " . $_SESSION['username'] . " | <a href='./logout.php'>Log out</a>";
-        } ?>
+                echo "Welcome " . $_SESSION['username'] . " | <a href='./logout.php'>Log out</a>";
+            } ?>
         </div>
 
         <nav>
@@ -31,8 +31,8 @@ session_start();
                 <li><a href="pixelPlayground.php">Home</a></li>
                 <li><a href="games.php">Games</a></li>
                 <?php if (!isset($_SESSION['username'])) {
-            echo "<li><a href='login.php'>Login/Sign up</a></li>";
-        } ?>
+                    echo "<li><a href='login.php'>Login/Sign up</a></li>";
+                } ?>
                 <li><a href="score.php">Score</a></li>
                 <li><a href="about.php">About</a></li>
             </ul>
@@ -63,9 +63,10 @@ session_start();
 
             <!-- edit -->
             <h3>Architecture</h3>
-                <p>Frontend-Backend Interaction: The frontend communicates with the backend using RESTful APIs.</p>
-                <p>Data Flow: User actions and game data are sent to the backend, processed, and stored in the SQLite3 database. The backend serves game state data to the frontend and Godot.</p>
-                <p>Hosting: The application is hosted on Heroku with a CI/CD pipeline for continuous deployment.</p>
+            <p>Frontend-Backend Interaction: The frontend communicates with the backend using RESTful APIs.</p>
+            <p>Data Flow: User actions and game data are sent to the backend, processed, and stored in the SQLite3
+                database. The backend serves game state data to the frontend and Godot.</p>
+            <p>Hosting: The application is hosted on Heroku with a CI/CD pipeline for continuous deployment.</p>
 
             <h3>Team Members</h3>
             <p>Jacob Lin: Frontend Developer and Game Developer (Godot)</p>
@@ -74,7 +75,8 @@ session_start();
             <p>Andrew Fales: Game Developer (Godot)</p>
 
             <h3>Development Process</h3>
-            <p>We followed Agile methodology with bi-weekly sprints and stand-up meetings. Tools such as Trello for project
+            <p>We followed Agile methodology with bi-weekly sprints and stand-up meetings. Tools such as Trello for
+                project
                 management and GitHub for version control were crucial in our development process.</p>
 
 
@@ -85,4 +87,5 @@ session_start();
         <p>&copy; 2024 Pixel Playground. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
