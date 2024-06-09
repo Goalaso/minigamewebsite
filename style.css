@@ -185,3 +185,30 @@ footer {
     width: 50%;
     padding: 10px;
 }
+
+.high-score-table {
+    display: inline;
+}
+
+.high-score-table th,
+.high-score-table td {
+    border: 1px solid #8b0000;
+}
+
+datalist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    writing-mode: vertical-lr;
+    width: 200px;
+  }
+  
+  option {
+    padding: 0;
+  }
+  
+  input[type="range"] {
+    width: 200px;
+    margin: 0;
+  }
+  
