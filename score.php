@@ -93,8 +93,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
 
             <select id="game" name="game">
                 <option value="dino">Dino Runner</option>
-                <option value="creeps">Dodge the creeps</option>
+                <option value="creeps">Dodge the Creeps</option>
                 <option value="snake">Snake</option>
+                <option value="bird">Wacky Bird</option>
             </select>
 
 
@@ -106,8 +107,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
         $game = 'all';
         $numScores = 10;
         $personal = 0;
-        $games = array("snake", "dino", "creeps");
-        $gamenames = array("Snake", "Dino Runner", "Dodge the Creeps");
+        $games = array("snake", "dino", "creeps", "bird");
+        $gamenames = array("Snake", "Dino Runner", "Dodge the Creeps", "Wacky Bird");
 
         // User high score table values`
         if (isset($_GET['game'])) {
@@ -167,6 +168,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
                     case 'snake':
                         $gamename = 'Snake';
                         break;
+                    case 'bird':
+                        $gamename = 'Wacky Bird';
+                        break;
                     default:
                     echo 'Error: no game name';
                 }
@@ -206,6 +210,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
                     break;
                 case 'snake':
                     $gamename = 'Snake';
+                    break;
+                case 'bird':
+                    $gamename = 'Wacky Bird';
                     break;
                 default:
                 echo 'Error: no game name';
