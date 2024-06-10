@@ -96,6 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
                 <option value="creeps">Dodge the Creeps</option>
                 <option value="snake">Snake</option>
                 <option value="bird">Wacky Bird</option>
+                <option value="space">Space Invaders</option>
             </select>
 
 
@@ -171,6 +172,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
                     case 'bird':
                         $gamename = 'Wacky Bird';
                         break;
+                    case 'space':
+                        $gamename = 'Space Invaders';
+                        break;
                     default:
                     echo 'Error: no game name';
                 }
@@ -213,6 +217,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
                     break;
                 case 'bird':
                     $gamename = 'Wacky Bird';
+                    break;
+                case 'space':
+                    $gamename = 'Space Invaders';
                     break;
                 default:
                 echo 'Error: no game name';
