@@ -73,10 +73,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $query = $database->prepare("SELECT * FROM account WHERE username = :username;");
             $query->bindValue(":username", $_POST["username"], SQLITE3_TEXT);
             $isUsernameTaken = $query->execute();
-            // echo var_dump($isUsernameTaken);
-
-            // Idk how this works. isUsernameTaken always has value 0 when var_dumped but if statement still executes?
-            if ($isUsernameTaken) {
+            //while ($row = $isUsernameTaken->fetchArray()) {
+            //    var_dump($row);
+            //}
+            if (sizeof($isUsernameTaken->fetchArray()) < 1) {
 
                 $insert_query = $database->prepare("INSERT INTO account (username, password) VALUES
     (:username, :password);");
