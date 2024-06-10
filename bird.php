@@ -37,7 +37,7 @@ session_start();
             </ul>
         </nav>
     </div>
-    <div class="game-div"><iframe src="../Dino Runner/dinorun.html" width=1152 height=648> </iframe></div>
+    <div class="game-div"><iframe src="../Flappy Bird/Flappy.html" width=864 height=936> </iframe></div>
     <footer>
         <p>&copy; 2024 Pixel Playground. All rights reserved.</p>
     </footer>

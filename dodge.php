@@ -37,7 +37,7 @@ session_start();
             </ul>
         </nav>
     </div>
-    <div class="game-div"><iframe src="../Dodge the Creeps/game.html" width=1152 height=648> </iframe></div>
+    <div class="game-div"><iframe src="../Dodge the Creeps/index.html" width=480 height=720> </iframe></div>
     <footer>
         <p>&copy; 2024 Pixel Playground. All rights reserved.</p>
     </footer>

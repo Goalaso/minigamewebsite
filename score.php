@@ -171,6 +171,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
                         break;
                     case 'bird':
                         $gamename = 'Wacky Bird';
+                        $gamename = 'Flappy Bird';
                         break;
                     case 'space':
                         $gamename = 'Space Invaders';
@@ -217,6 +218,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
                     break;
                 case 'bird':
                     $gamename = 'Wacky Bird';
+                    $gamename = 'Flappy Bird';
                     break;
                 case 'space':
                     $gamename = 'Space Invaders';
