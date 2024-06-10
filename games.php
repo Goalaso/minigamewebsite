@@ -79,10 +79,18 @@ session_start();
 
             <div class="game-container">
                 <div class="game-screen">
-                    <a href="bird.php"><img class="thumbnail" src="assets/images/wackyBird.png" alt="Wacky Bird">
+                    <a href="bird.php"><img class="thumbnail" src="assets/images/flappyBird.png" alt="Flappy Bird">
                 </div>
-                <h2>Wacky Bird</h2>
+                <h2>Flappy Bird</h2>
                 <a href="bird.php"><button class="play-now-button">play now</button></a>
+            </div>
+
+            <div class="game-container">
+                <div class="game-screen">
+                    <a href="space.php"><img class="thumbnail" src="assets/images/spaceInvaders.png" alt="Space Invaders">
+                </div>
+                <h2>Space Invaders</h2>
+                <a href="space.php"><button class="play-now-button">play now</button></a>
             </div>
         </div>
 
