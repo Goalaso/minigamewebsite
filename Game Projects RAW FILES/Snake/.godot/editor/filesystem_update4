@@ -1,0 +1,7 @@
+res://scenes/main.tscn
+res://scenes/main.gd
+res://scenes/high_score_menu.tscn
+res://scenes/hud.tscn
+res://scenes/game_over_menu.tscn
+res://scenes/start_game_menu.tscn
+res://scenes/high_score_menu.gd

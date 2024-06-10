@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://tmcq5gpw66gu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36f6m"]
+bg_color = Color(0, 0.392157, 0.878431, 1)
+
+[node name="Hud" type="CanvasLayer"]
+
+[node name="ScorePanel" type="Panel" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_36f6m")
+
+[node name="HighScoreLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 134.0
+offset_top = -6.0
+offset_right = 494.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "HIGHSCORE: 0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -490.0
+offset_top = -6.0
+offset_right = -192.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "SCORE: 0"
+vertical_alignment = 1
