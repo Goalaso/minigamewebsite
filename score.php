@@ -77,32 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
 } else if ($_SERVER['REQUEST_METHOD'] == 'GET') { // Create high score table
 
     ?>
-        <form action="score.php" method="GET">
-            <input type="range" id="numScores" name="numScores" list="values">
-            <label for="numScores">Number of scores shown</label>
-            <datalist id="values">
-                <option value="0" label="0"></option>
-                <option value="25" label="25"></option>
-                <option value="50" label="50"></option>
-                <option value="75" label="75"></option>
-                <option value="100" label="100"></option>
-            </datalist>
-
-            <input type="checkbox" id="personal" name="personal" value="1">
-            <label for="personal">Personal high scores only?</label>
-
-            <select id="game" name="game">
-                <option value="dino">Dino Runner</option>
-                <option value="creeps">Dodge the Creeps</option>
-                <option value="snake">Snake</option>
-                <option value="bird">Wacky Bird</option>
-                <option value="space">Space Invaders</option>
-            </select>
-
-
-            <input type="submit" value="Submit">
-        </form>
-
+        
         <?php
         // Default high score table values
         $game = 'all';
@@ -258,5 +233,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
 }
 
 ?>
+<form action="score.php" method="GET">
+            <input type="range" id="numScores" name="numScores" list="values">
+            <label for="numScores">Number of scores shown</label>
+            <datalist id="values">
+                <option value="0" label="0"></option>
+                <option value="25" label="25"></option>
+                <option value="50" label="50"></option>
+                <option value="75" label="75"></option>
+                <option value="100" label="100"></option>
+            </datalist>
 
+            <input type="checkbox" id="personal" name="personal" value="1">
+            <label for="personal">Personal high scores only?</label>
+
+            <select id="game" name="game">
+                <option value="all">All</option>
+                <option value="dino">Dino Runner</option>
+                <option value="creeps">Dodge the Creeps</option>
+                <option value="snake">Snake</option>
+                <option value="bird">Flappy Bird</option>
+                <option value="space">Space Invaders</option>
+            </select>
+
+
+            <input type="submit" value="Submit">
+        </form>
 </html>
