@@ -36,13 +36,14 @@ body {
   margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*Add a subtle shadow effect */
-}
-
-.thumbnail {
-  width: 137.1px;
-  height: 80px;
-  object-fit: contain;
-}
+  }
+  
+    .thumbnail {
+      width: 137.1px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: contain;
+    }
 .play-now-button {
   background-color: var(
     --accent-color
