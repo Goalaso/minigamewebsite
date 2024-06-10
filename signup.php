@@ -72,11 +72,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $query = $database->prepare("SELECT * FROM account WHERE username = :username;");
             $query->bindValue(":username", $_POST["username"], SQLITE3_TEXT);
-            $isUsernameTaken = $query->execute();
+            $return = $query->execute();
             //while ($row = $isUsernameTaken->fetchArray()) {
             //    var_dump($row);
             //}
-            if (sizeof($isUsernameTaken->fetchArray()) < 1) {
+            
+            $isUsernameTaken = $return->fetchArray();
+            if ($isUsernameTaken == false) {
 
                 $insert_query = $database->prepare("INSERT INTO account (username, password) VALUES
     (:username, :password);");
