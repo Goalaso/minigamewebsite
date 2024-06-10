@@ -108,8 +108,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
         $game = 'all';
         $numScores = 10;
         $personal = 0;
-        $games = array("snake", "dino", "creeps", "bird");
-        $gamenames = array("Snake", "Dino Runner", "Dodge the Creeps", "Wacky Bird");
+        $games = array("snake", "dino", "creeps", "bird", "space");
+        $gamenames = array("Snake", "Dino Runner", "Dodge the Creeps", "Flappy Bird", "Space Invaders");
 
         // User high score table values`
         if (isset($_GET['game'])) {
