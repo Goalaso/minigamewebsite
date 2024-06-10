@@ -63,7 +63,7 @@ session_start();
 
             <!-- edit -->
             <h3>Architecture</h3>
-            <p>Frontend-Backend Interaction: The frontend communicates with the backend using RESTful APIs.</p>
+            <p>Frontend-Backend Interaction: The frontend communicates with the backend using PHP/JavaScript.</p>
             <p>Data Flow: User actions and game data are sent to the backend, processed, and stored in the SQLite3
                 database. The backend serves game state data to the frontend and Godot.</p>
             <p>Hosting: The application is hosted on Heroku with a CI/CD pipeline for continuous deployment.</p>
