@@ -26,6 +26,7 @@ func game_over():
 	
 func new_game():
 	score = 0
+	new_high_score = false
 	$HUD.hide_submit()
 	$Player.start($StartPosition.position)
 	$StartTimer.start()

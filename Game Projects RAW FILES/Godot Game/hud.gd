@@ -33,7 +33,7 @@ func show_high_score_game_over():
 	await $MessageTimer.timeout
 	$SubmitMessage.show()
 	$SubmitButton.show()
-	
+	$RestartButton.show()
 	
 	
 func update_score(score):
@@ -56,6 +56,7 @@ func hide_submit():
 func _on_submit_button_pressed():
 	$SubmitMessage.hide()
 	$SubmitButton.hide()
+	$RestartButton.hide()
 	_on_high_score_menu_save_score()
 	show_message("Score Saved!")
 	
@@ -69,7 +70,7 @@ func _on_submit_button_pressed():
 
 func _on_high_score_menu_save_score():
 	var myurl = "/score.php"
-	var dict = {"game": "snake", "score": cur_high_score}
+	var dict = {"game": "creeps", "score": cur_high_score}
 	_make_post_request(myurl, dict)
 
 func _make_post_request(url, data_to_send):
@@ -84,3 +85,18 @@ func _make_post_request(url, data_to_send):
 		print("Connecting...")
 		await get_tree().process_frame
 		http.request(HTTPClient.METHOD_POST, url, headers, query)
+
+
+func _on_restart_button_pressed():
+	$SubmitMessage.hide()
+	$SubmitButton.hide()
+	$RestartButton.hide()
+	show_message("Restarting")
+	
+	await $MessageTimer.timeout
+	
+	$Message.text = "Dodge the Creeps!"
+	$Message.show()
+	# Make a one-shot timer and wait for it to finish.
+	await get_tree().create_timer(1.0).timeout
+	$StartButton.show()

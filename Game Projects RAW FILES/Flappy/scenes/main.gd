@@ -128,7 +128,7 @@ func _on_high_score_game_over_submit():
 
 func _on_high_score_menu_save_score():
 	var myurl = "/score.php"
-	var dict = {"game": "flappybird", "score": high_score}
+	var dict = {"game": "bird", "score": high_score}
 	_make_post_request(myurl, dict)
 
 func _make_post_request(url, data_to_send):

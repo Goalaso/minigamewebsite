@@ -8,19 +8,19 @@
 script = ExtResource("1_5tj8n")
 
 [node name="RestartButton" type="Button" parent="."]
-offset_left = 343.0
-offset_top = 300.0
-offset_right = 498.0
-offset_bottom = 358.0
+offset_left = 336.0
+offset_top = 466.0
+offset_right = 491.0
+offset_bottom = 524.0
 
 [node name="HighScore" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -171.0
-offset_top = 217.0
-offset_right = 141.0
-offset_bottom = 272.0
+offset_left = -168.0
+offset_top = 160.0
+offset_right = 144.0
+offset_bottom = 215.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 40
@@ -28,23 +28,23 @@ text = "New High Score!
 "
 
 [node name="Restart" type="Sprite2D" parent="."]
-position = Vector2(421, 329)
+position = Vector2(416, 495)
 scale = Vector2(1.34167, 1.39286)
 texture = ExtResource("2_0n7r7")
 
 [node name="SubmitButton" type="Button" parent="."]
-offset_left = 345.0
-offset_top = 449.0
-offset_right = 499.0
-offset_bottom = 493.0
+offset_left = 336.0
+offset_top = 390.0
+offset_right = 490.0
+offset_bottom = 434.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 
 [node name="SubmitLabel" type="Label" parent="."]
-offset_left = 179.0
-offset_top = 380.0
-offset_right = 675.0
-offset_bottom = 435.0
+offset_left = 176.0
+offset_top = 304.0
+offset_right = 672.0
+offset_bottom = 359.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 35
@@ -52,7 +52,7 @@ text = "Submit Score To Leaderboard"
 horizontal_alignment = 1
 
 [node name="SubmitButtonBrightened" type="Sprite2D" parent="."]
-position = Vector2(422, 472)
+position = Vector2(413, 410)
 scale = Vector2(1.30208, 1.09524)
 texture = ExtResource("4_d5it5")
 
