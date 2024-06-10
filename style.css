@@ -225,3 +225,11 @@ input[type="range"] {
   width: 200px;
   margin: 0;
 }
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 100px;
+  padding-left: 100px;
+}

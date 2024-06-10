@@ -42,7 +42,7 @@ session_start();
 
     <main>
         <!-- Game thumbnails -->
-        <div class="game-grid">
+        <div class="flex-container" width=100%>
             <div class="game-container">
                 <div class="game-screen">
                     <a href="snake.php"><img class="thumbnail" src="assets/images/snake.png" alt="Snake">
@@ -68,14 +68,6 @@ session_start();
                 <a href="dodge.php"> <button class="play-now-button">play now</button> </a>
             </div>
 
-            <div class="game-container">
-                <div class="game-screen">
-                    <a href="minesweeper.php"><img class="thumbnail" src="assets/images/minesweeper.png"
-                            alt="Minesweeper">
-                </div>
-                <h2>Minesweeper</h2>
-                <a href="minesweeper.php"> <button class="play-now-button">play now</button> </a>
-            </div>
 
             <div class="game-container">
                 <div class="game-screen">
@@ -91,6 +83,15 @@ session_start();
                 </div>
                 <h2>Space Invaders</h2>
                 <a href="space.php"><button class="play-now-button">play now</button></a>
+            </div>
+            
+            <div class="game-container">
+                <div class="game-screen">
+                    <a href="minesweeper.php"><img class="thumbnail" src="assets/images/minesweeper.png"
+                            alt="Minesweeper">
+                </div>
+                <h2>Minesweeper</h2>
+                <a href="minesweeper.php"> <button class="play-now-button">play now</button> </a>
             </div>
         </div>
 

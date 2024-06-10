@@ -102,33 +102,68 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
         // echo ($game . $numScores . " " . $personal);
     
         if ($game == 'all') {
-            $i = 0;
-            foreach ($games as $game) {
-                $query = "
-                    SELECT * FROM score
-                    WHERE game = '" . $game . "' 
-                    ORDER BY score DESC
-                    LIMIT " . $numScores
-                ;
-                $scores = $database->query($query);
-
-                echo "
-                        <table class='high-score-table'>
-                            <caption>" . $gamenames[$i] . "</caption>
-                            <tr>
-                                <th>User</th>
-                                <th>Score</th>
-                            </tr>
-                    ";
-
-                while ($row = $scores->fetchArray(SQLITE3_ASSOC)) {
-                    echo "<tr>";
-                    echo "<td>" . $row['username'] . "</td>";
-                    echo "<td>" . $row['score'] . "</td>";
-                    echo "</tr>";
+            if (isset($_GET['personal'])) {
+                if (!isset($_SESSION['username'])) {
+                    echo "Please log in to view personal high scores";
+                } else {
+                    $i = 0;
+                    foreach ($games as $game) {
+                        $query = "
+                            SELECT * FROM score
+                            WHERE game = '" . $game . "' AND username = '" . $_SESSION['username'] . "'
+                            ORDER BY score DESC
+                            LIMIT " . $numScores
+                        ;
+                        $scores = $database->query($query);
+        
+                        echo "
+                                <table class='high-score-table'>
+                                    <caption>" . $gamenames[$i] . "</caption>
+                                    <tr>
+                                        <th>User</th>
+                                        <th>Score</th>
+                                    </tr>
+                            ";
+        
+                        while ($row = $scores->fetchArray(SQLITE3_ASSOC)) {
+                            echo "<tr>";
+                            echo "<td>" . $row['username'] . "</td>";
+                            echo "<td>" . $row['score'] . "</td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
+                        $i++;
+                    }
                 }
-                echo "</table>";
-                $i++;
+            } else {
+                $i = 0;
+                foreach ($games as $game) {
+                    $query = "
+                        SELECT * FROM score
+                        WHERE game = '" . $game . "' 
+                        ORDER BY score DESC
+                        LIMIT " . $numScores
+                    ;
+                    $scores = $database->query($query);
+    
+                    echo "
+                            <table class='high-score-table'>
+                                <caption>" . $gamenames[$i] . "</caption>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Score</th>
+                                </tr>
+                        ";
+    
+                    while ($row = $scores->fetchArray(SQLITE3_ASSOC)) {
+                        echo "<tr>";
+                        echo "<td>" . $row['username'] . "</td>";
+                        echo "<td>" . $row['score'] . "</td>";
+                        echo "</tr>";
+                    }
+                    echo "</table>";
+                    $i++;
+                }
             }
         } else if (isset($_GET['personal'])) {
             if (!isset($_SESSION['username'])) {
@@ -145,7 +180,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Insert score into database
                         $gamename = 'Snake';
                         break;
                     case 'bird':
-                        $gamename = 'Wacky Bird';
                         $gamename = 'Flappy Bird';
                         break;
                     case 'space':
