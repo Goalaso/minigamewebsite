@@ -56,7 +56,7 @@ session_start();
                 </div>
                 <button type="submit">Sign up</button>
             </form>
-            <p>Don't have an account? <a href="signup.php">Sign up</a></p>
+            <p>Have an account? <a href="login.php">Sign in</a></p>
         </div>
     </main>
 
@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $accounts = $insert_query->execute();
 
                 // Test
-                echo "Success!";
+                echo "Account created!";
                 //echo var_dump($accounts->fetchArray());
                 // header("Location: manage.php");
             } else {
