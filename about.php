@@ -44,7 +44,7 @@ session_start();
         <div class="about-block">
             <h2>Welcome to Pixel Playground!</h2>
             <h3>Project Overview</h3>
-            <p>Pixel Playground is a minigames website that is a platform designed to offer a collection of engaging and
+            <p>Pixel Playground is a mini games website that is a platform designed to offer a collection of engaging and
                 fun minigames to users.
                 Developed as part of the CS 410 Software Engineering course, this project aims to provide a seamless and
                 enjoyable gaming experience through a well-integrated frontend, backend, and game engine.</p>
@@ -59,7 +59,7 @@ session_start();
             <h3>Technology Stack</h3>
             <p>Frontend: Built with HTML, CSS, and JavaScript.</p>
             <p>Backend: Powered by PHP with SQLite3 for database management.</p>
-            <p>Game Development: GAmes are created and integrated using Godot Engine.</p>
+            <p>Game Development: Games are created and integrated using Godot Engine.</p>
 
             <!-- edit -->
             <h3>Architecture</h3>
